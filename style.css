@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Charm&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.pop-up {
+  width: 50rem;
+  height: 25rem;
+  background-color: #f1eeeb;
+  margin: 5rem auto;
+  position: relative;
+  display: flex;
+}
+.pop-up__left {
+  width: 46.25%;
+  margin: auto 0;
+}
+.pop-up__left-img {
+  width: 96%;
+  margin-left: 4%;
+}
+.pop-up__right {
+  width: 48.25%;
+  margin: auto 0;
+}
+.pop-up__right-warning {
+  font-family: "Charm", cursive;
+  font-size: 1.5rem;
+  color: #868685;
+  margin-bottom: 6px;
+}
+.pop-up__right-title {
+  text-transform: uppercase;
+  color: #3fb871;
+  margin-bottom: 2rem;
+}
+.pop-up__right-text-input {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.pop-up__right-text-input input[type=text] {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid black;
+  padding: 15px 0 15px 20px;
+  font-size: 0.8rem;
+}
+.pop-up__right-text-input input[type=text] + label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  padding: 0 18px;
+  background: #3fb871;
+  font-size: 0.8rem;
+  border: 1px solid black;
+  border-left: none;
+}
+.pop-up__right-detail {
+  color: #868685;
+  font-size: 0.85rem;
+  text-align: justify;
+  line-height: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+.pop-up__right-check {
+  color: #868685;
+  font-size: 0.85rem;
+}
+.pop-up__right-check #checked {
+  display: none;
+}
+.pop-up__right-check input#checked + label {
+  display: block;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+.pop-up__right-check input#checked + label::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d7d7d7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  transition: all 0.12s, border-color 0.08s;
+}
+.pop-up__right-check input#checked:checked + label::before {
+  width: 7px;
+  top: -4px;
+  left: 0.3rem;
+  border-color: #868685;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+.pop-up__close {
+  position: absolute;
+  color: #3fb871;
+  font-size: 1.2rem;
+  top: 12px;
+  right: 14px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/*# sourceMappingURL=style.css.map */

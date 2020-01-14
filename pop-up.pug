@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="fontawsome/css/all.min.css")
+        title Pop Up
+    body
+        .pop-up
+            .pop-up__left
+                img.pop-up__left-img(src="images/pop-up.png", alt="Pop Up")
+            .pop-up__right
+                .pop-up__right-warning Nhận tin tức từ chúng tôi
+                h2.pop-up__right-title đăng ký email ngay hôm nay
+                .pop-up__right-text-input
+                    input#inputEmail(type="text" placeholder="Nhập email của bạn vào đây")
+                    label(class="fas fa-paper-plane" for="inputEmail")
+                p.pop-up__right-detail Đăng ký email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi
+                .pop-up__right-check
+                    input(type="checkbox", id="checked")
+                    label(for="checked") Không hiển thị lại thông báo này nữa
+            .pop-up__close X

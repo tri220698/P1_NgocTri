@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Charm&display=swap');
+
+.pop-up {
+    width: 50rem;
+    height: 25rem;
+    background-color: $pop-up-bg;
+    margin: 5rem auto;
+    position: relative;
+    display: flex;
+
+    &__left {
+        width: 46.25%;
+        margin: auto 0;
+
+        &-img {
+            width: 96%;
+            margin-left: 4%;
+        }
+    }
+
+    &__right {
+        width: 48.25%;
+        margin: auto 0;
+
+        &-warning {
+            font-family: 'Charm', cursive;
+            font-size: 1.5rem;
+            color: $color-gray;
+            margin-bottom: 6px;
+        }
+
+        &-title {
+            text-transform: uppercase;
+            color: $color-green;
+            margin-bottom: 2rem;
+        }
+
+        &-text-input {
+            position: relative;
+            margin-bottom: 1rem;
+
+            input[type="text"]{
+                display: inline-block;
+                width: 100%;
+                height: 45px;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid black;
+                padding: 15px 0 15px 20px;
+                font-size: 0.8rem;
+            }
+
+            input[type="text"] + label{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 45px;
+                line-height: 45px;
+                color: white;
+                padding: 0 18px;
+                background: $color-green;
+                font-size: 0.8rem;
+                border: 1px solid black;
+                border-left: none;
+            }
+        }
+
+        &-detail {
+            color: $color-gray;
+            font-size: $font-size;
+            text-align: justify;
+            line-height: 1.4rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &-check {
+            color: $color-gray;
+            font-size: $font-size;
+
+            #checked {
+                display: none;
+            }
+
+            input#checked + label {
+                display: block;
+                position: relative;
+                padding-left: 1.5rem;
+                cursor: pointer;
+            }
+
+            input#checked + label::before {
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #d7d7d7;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: white;
+                transition: all .12s, border-color .08s;
+            }
+
+            input#checked:checked + label::before {
+                width: 7px;
+                top: -4px;
+                left: 0.3rem;
+                border-color: $color-gray;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        color: $color-green;
+        font-size: 1.2rem;
+        top: 12px;
+        right: 14px;
+        cursor: pointer;
+        z-index: 999;
+    }
+}
