@@ -1,0 +1,250 @@
+.footer {
+    width: 100%;
+    background-color: $footer-bg;
+
+    hr {
+        border: none;
+        border-top: 1px solid $color-gray;
+    }
+
+    &__first {
+        @include container;
+        display: flex;
+        padding: 2rem 0 1.75rem 0;
+
+        &-left {
+            width: 55%;
+            color: $color-gray;
+            display: flex;
+
+            &-channel {
+                ul {
+                    margin-top: 7px;
+                    li {
+                        padding: 0 10px;
+                        cursor: pointer;
+    
+                        &:nth-child(1) {
+                            padding-left: 0;
+                        }
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &-receive-email {
+                margin-left: auto;
+                width: 30%;
+
+                h4 {
+                    line-height: 26px;
+                }
+            }
+        }
+
+        &-right {
+            width: 40%;
+            margin-left: auto;
+
+            &-text-input {
+                position: relative;
+    
+                input[type="text"]{
+                    display: inline-block;
+                    width: 100%;
+                    height: 45px;
+                    box-sizing: border-box;
+                    outline: none;
+                    border: 1px solid $footer-bg;
+                    padding: 15px 0 15px 20px;
+                    font-size: $font-size;
+                }
+    
+                input[type="text"] + label{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 45px;
+                    line-height: 45px;
+                    color: white;
+                    padding: 0 18px;
+                    background: $color-green;
+                    font-size: $font-size;
+                    border: 1px solid $footer-bg;
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    &__second {
+        @include container;
+        display: flex;
+        padding: 3rem 0;
+
+        &-left {
+            width: 55.5%;
+            display: flex;
+
+            &-shop-infor {
+                width: 60%;
+
+                p {
+                    font-size: $font-size;
+                    color: $color-footer;
+                    padding: 8px 0;
+                    display: block;
+                    text-align: justify;
+
+                    &:nth-last-child(1) {
+                        padding-bottom: 0;
+                    }
+
+                    &::before {
+                        color: $color-green;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            &-user {
+                width: 30.5%;
+                margin-left: auto;
+
+                h4 {
+                    color: $color-green;
+                    margin-bottom: 2rem;
+                }
+
+                ul {
+                    color: $color-footer;
+                    font-size: $font-size;
+    
+                    li {
+                        display: block;
+                        font-weight: 100;
+                        padding-bottom: 1.5rem;
+                        cursor: pointer;
+
+                        &::before {
+                            font-weight: bold;
+                            font-size: 8px;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &:nth-last-child(1) {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            width: 40%;
+            margin-left: auto;
+            display: flex;
+
+            &-item {
+                margin: auto;
+
+                h4 {
+                    color: $color-green;
+                    margin-bottom: 2rem;
+                }
+
+                ul {
+                    color: $color-footer;
+                    font-size: $font-size;
+    
+                    li {
+                        display: block;
+                        font-weight: 100;
+                        padding-bottom: 1.5rem;
+                        cursor: pointer;
+
+                        &::before {
+                            font-weight: bold;
+                            font-size: 8px;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &:nth-last-child(1) {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                &:nth-last-child(1) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__third {
+        @include container;
+        display: flex;
+
+        &-left {
+            list-style-type: none;
+            color: $color-footer;
+            display: flex;
+            font-size: $font-size;
+
+            li {
+                padding: 24px 12px;
+                cursor: pointer;
+
+                &:nth-child(1) {
+                    padding-left: 0;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-right {
+            margin-left: auto;
+            list-style-type: none;
+            color: $color-footer;
+            display: flex;
+
+            li {
+                padding: 24px 6px;
+
+                &:nth-last-child(1) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 15px 0;
+        background-color: $copy-bg;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

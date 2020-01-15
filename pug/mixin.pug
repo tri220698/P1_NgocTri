@@ -1,0 +1,22 @@
+mixin category(cl,name)
+    div(class= cl + "__category") Home / 
+        a(href="#")= name
+
+mixin inputText(cl,label,asterisk)
+    div(class= cl + "input-text")
+        label(for="")!= label + asterisk
+        input(type="text")
+
+mixin footerService(title,services)
+    h4= title
+    ul
+        each service in services
+            li(class="fas fa-chevron-right")= service
+
+mixin channel(...icons)
+    each icon in icons
+        li(class= "fab fa-" + icon)
+
+mixin iconPay(icons) 
+    each icon in icons
+        li(class= "fab fa-cc-" + icon)

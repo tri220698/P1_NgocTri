@@ -1,0 +1,74 @@
+@mixin container {
+    width: 1140px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@mixin button($background,$color) {
+    display: inline-block;
+    text-decoration: none;
+    color: $color;
+    background-color: $background;
+    width: 150px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 1px solid $color-green;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-size: $font-size;
+    padding-top: 0.85rem;
+}
+
+@mixin icon-header($width,$height,$padding) {
+    width: $width;
+    height: $height;
+    float: left;
+    padding: $padding;
+    border-left: $social-border;
+    cursor: pointer;
+
+    &:nth-last-child(1) {
+        border-right: $social-border;
+    }
+
+    &:hover {
+        color: white;
+    }
+}
+
+@mixin category {
+    &__category {
+        font-size: $font-size;
+        margin-top: 20px;
+        margin-bottom: 4rem;
+        color: $color-gray;
+
+        a {
+            text-decoration: none;
+            color: $color-green;
+        }
+    }
+}
+
+@mixin input-text($width) {
+    width: $width;
+    margin-bottom: 2rem;
+
+    label {
+        width: 100%;
+        display: block;
+        font-size: $font-size;
+        color: $color-gray;
+        margin-bottom: 12px;
+
+        b {
+            color: red;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 42px;
+        padding: 0 12px;
+    }
+}

@@ -1,0 +1,80 @@
+.register {
+    @include container;
+
+    @include category;
+
+    &__title-group {
+        color: $color-green;
+        margin-bottom: 2rem;
+    }
+
+    &-input-group {
+        width: 1080px;
+        display: flex;
+
+        .register__input-text {
+            @include input-text(47%);
+
+            &:nth-last-child(1) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__check {
+        color: $color-gray;
+        font-size: $font-size;
+        margin-bottom: 4.5rem;
+
+        #checkEmail {
+            display: none;
+        }
+
+        input#checkEmail + label {
+            display: block;
+            position: relative;
+            padding-left: 2rem;
+            cursor: pointer;
+        }
+
+        input#checkEmail + label::before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #d7d7d7;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: white;
+            transition: all .12s, border-color .08s;
+        }
+
+        input#checkEmail:checked + label::before {
+            width: 7px;
+            top: -4px;
+            left: 0.3rem;
+            border-color: $color-gray;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: transparent;
+        }
+    }
+
+    &__action {
+        margin-top: 0.8rem;
+        margin-bottom: 4.5rem;
+        display: flex;
+
+        &-back {
+            @include button(transparent,$color-green);
+        }
+
+        &-regis{
+            @include button($color-green,white);
+            margin-left: 20px;
+        }
+    }
+}

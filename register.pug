@@ -1,0 +1,21 @@
+include pug/header.pug
+section.register
+    +category("register", "Đăng ký")
+    h3.register__title-group THÔNG TIN CÁ NHÂN
+    .register-input-group
+        +inputText("register__","Họ và tên ","<b>*</b>")
+        +inputText("register__","Số ĐT ","<b>*</b>")
+    .register-input-group
+        +inputText("register__","Địa chỉ email ","<b>*</b>")
+        +inputText("register__","Website của bạn ","<b>*</b>")
+    .register__check
+        input(type="checkbox", id="checkEmail")
+        label(for="checkEmail") Đăng ký nhận thông tin qua email
+    h3.register__title-group THÔNG TIN TÀI KHOẢN
+    .register-input-group
+        +inputText("register__","Mật khẩu ","<b>*</b>")
+        +inputText("register__","Nhập lại mật khẩu ","<b>*</b>")
+    .register__action
+        a(href="#").register__action-back QUAY LẠI
+        a(href="#").register__action-regis ĐĂNG KÝ
+include pug/footer.pug
