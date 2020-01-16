@@ -1,0 +1,96 @@
+.login {
+    @include container;
+
+    @include category;
+
+    &-form {
+        width: 1080px;
+        margin-bottom: 7rem;
+        display: flex;
+
+        &__left {
+            width: 47%;
+
+            &-title {
+                color: $color-green;
+                margin-bottom: 60px;
+            }
+
+            &-input-text {
+                @include input-text(100%);
+            }
+
+            &-check {
+                color: black;
+                font-size: $font-size;
+                margin-bottom: 2.25rem;
+        
+                #checkRemember {
+                    display: none;
+                }
+        
+                input#checkRemember + label {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 2rem;
+                    cursor: pointer;
+                }
+        
+                input#checkRemember + label::before {
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #7d7d7d;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: white;
+                    transition: all .12s, border-color .08s;
+                }
+        
+                input#checkRemember:checked + label::before {
+                    width: 7px;
+                    top: -4px;
+                    left: 0.3rem;
+                    border-color: #7d7d7d;
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    background-color: transparent;
+                }
+
+                a {
+                    color: $color-gray;
+                    font-style: italic;
+                    margin-left: 1.5rem;
+                }
+            }
+
+            &-login {
+                @include button($color-green,white);
+            }
+        }
+
+        &__right {
+            width: 47%;
+            margin-left: auto;
+
+            &-title {
+                color: $color-green;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $color-gray;
+                margin-bottom: 40px;
+            }
+
+            &-regis {
+                @include button($color-green,white);
+            }
+        }
+    }
+}

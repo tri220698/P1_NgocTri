@@ -609,4 +609,134 @@
   margin-left: 20px;
 }
 
+.login {
+  width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.login__category {
+  font-size: 0.85rem;
+  margin-top: 20px;
+  margin-bottom: 4rem;
+  color: #868685;
+}
+.login__category a {
+  text-decoration: none;
+  color: #3fb871;
+}
+.login-form {
+  width: 1080px;
+  margin-bottom: 7rem;
+  display: flex;
+}
+.login-form__left {
+  width: 47%;
+}
+.login-form__left-title {
+  color: #3fb871;
+  margin-bottom: 60px;
+}
+.login-form__left-input-text {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.login-form__left-input-text label {
+  width: 100%;
+  display: block;
+  font-size: 0.85rem;
+  color: #868685;
+  margin-bottom: 12px;
+}
+.login-form__left-input-text label b {
+  color: red;
+}
+.login-form__left-input-text input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+}
+.login-form__left-check {
+  color: black;
+  font-size: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+.login-form__left-check #checkRemember {
+  display: none;
+}
+.login-form__left-check input#checkRemember + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+.login-form__left-check input#checkRemember + label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #7d7d7d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  transition: all 0.12s, border-color 0.08s;
+}
+.login-form__left-check input#checkRemember:checked + label::before {
+  width: 7px;
+  top: -4px;
+  left: 0.3rem;
+  border-color: #7d7d7d;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+.login-form__left-check a {
+  color: #868685;
+  font-style: italic;
+  margin-left: 1.5rem;
+}
+.login-form__left-login {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #3fb871;
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #3fb871;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  padding-top: 0.85rem;
+}
+.login-form__right {
+  width: 47%;
+  margin-left: auto;
+}
+.login-form__right-title {
+  color: #3fb871;
+  margin-bottom: 20px;
+}
+.login-form__right p {
+  font-size: 0.8rem;
+  color: #868685;
+  margin-bottom: 40px;
+}
+.login-form__right-regis {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #3fb871;
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #3fb871;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  padding-top: 0.85rem;
+}
+
 /*# sourceMappingURL=style.css.map */

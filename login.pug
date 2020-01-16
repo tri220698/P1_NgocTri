@@ -1,0 +1,18 @@
+include pug/header.pug
+section.login
+    +category("login", "Đăng nhập")
+    .login-form
+        .login-form__left
+            h3.login-form__left-title THÔNG TIN CÁ NHÂN
+            +inputText("login-form__left-","Email của bạn ","")
+            +inputText("login-form__left-","Mật khẩu ","")
+            .login-form__left-check
+                input(type="checkbox", id="checkRemember")
+                label(for="checkRemember") Ghi nhớ tài khoản
+                a(href="#") Bạn quên mật khẩu ?
+            a(href="#").login-form__left-login ĐĂNG NHẬP
+        .login-form__right
+            h3.login-form__right-title BẠN CHƯA CÓ TÀI KHOẢN ?
+            p Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn  ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+            a(href="#").login-form__right-regis ĐĂNG KÝ
+include pug/footer.pug
