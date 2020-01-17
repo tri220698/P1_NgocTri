@@ -20,3 +20,19 @@ mixin channel(...icons)
 mixin iconPay(icons) 
     each icon in icons
         li(class= "fab fa-cc-" + icon)
+
+mixin cartItem(item)
+    .cart-list-product__item
+        img(src= item.img, alt="product").cart-list-product__item-img
+        span.cart-list-product__item-name= item.name
+        span.cart-list-product__item-price= item.price
+        span.cart-list-product__item-amount
+            p= item.amount
+        span.cart-list-product__item-total= item.total
+        span.cart-list-product__item-del
+            p(class="fas fa-trash-alt")
+
+mixin billItem(cl,title,price)
+    div(class= "cart-bill__information-item" + " " + cl)
+        .cart-bill__information-item-title= title
+        .cart-bill__information-item-price= price

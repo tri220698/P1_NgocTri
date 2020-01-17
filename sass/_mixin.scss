@@ -72,3 +72,15 @@
         padding: 0 12px;
     }
 }
+
+@mixin border-list-product($color,$padding-top) {
+    color: $color;
+    border: $cart-border;
+    border-right: none;
+    text-align: center;
+    padding-top: $padding-top;
+
+    &:nth-last-child(1) {
+        border-right: $cart-border;
+    }
+}
