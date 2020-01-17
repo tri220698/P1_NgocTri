@@ -739,4 +739,207 @@
   padding-top: 0.85rem;
 }
 
+.cart {
+  width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.cart__category {
+  font-size: 0.85rem;
+  margin-top: 20px;
+  margin-bottom: 4rem;
+  color: #868685;
+}
+.cart__category a {
+  text-decoration: none;
+  color: #3fb871;
+}
+.cart__category-name {
+  color: #3fb871;
+  padding-bottom: 4rem;
+}
+.cart-list-product {
+  width: 100%;
+}
+.cart-list-product__title {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  box-sizing: border-box;
+}
+.cart-list-product__title span {
+  background-color: #3fb871;
+  color: white;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  text-align: center;
+  padding-top: 17px;
+}
+.cart-list-product__title span:nth-last-child(1) {
+  border-right: 1px solid #c2c2c2;
+}
+.cart-list-product__title-img {
+  width: 190px;
+}
+.cart-list-product__title-name {
+  width: 270px;
+}
+.cart-list-product__title-price, .cart-list-product__title-amount {
+  width: 160px;
+}
+.cart-list-product__title-total {
+  width: 250px;
+}
+.cart-list-product__title-del {
+  width: 110px;
+}
+.cart-list-product__item {
+  width: 100%;
+  display: flex;
+  height: 190px;
+  box-sizing: border-box;
+}
+.cart-list-product__item span {
+  color: #868685;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  text-align: center;
+  padding-top: 87px;
+  border-top: none;
+}
+.cart-list-product__item span:nth-last-child(1) {
+  border-right: 1px solid #c2c2c2;
+}
+.cart-list-product__item-img {
+  width: 190px;
+  padding: 15px;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  border-top: none;
+}
+.cart-list-product__item-name {
+  width: 270px;
+  color: #3fb871 !important;
+}
+.cart-list-product__item-price {
+  width: 160px;
+}
+.cart-list-product__item-amount {
+  width: 160px;
+  margin-top: -1rem;
+}
+.cart-list-product__item-amount p {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #c2c2c2;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 14px;
+}
+.cart-list-product__item-total {
+  width: 250px;
+}
+.cart-list-product__item-del {
+  width: 110px;
+}
+.cart-action {
+  margin-top: 2.75rem;
+  margin-bottom: 4.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-action__cancel {
+  display: inline-block;
+  text-decoration: none;
+  color: #3fb871;
+  background-color: transparent;
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #3fb871;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  padding-top: 0.85rem;
+}
+.cart-action__buy {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #3fb871;
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #3fb871;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  padding-top: 0.85rem;
+  margin-left: 20px;
+}
+.cart-bill {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 13.5rem;
+}
+.cart-bill__information {
+  width: 680px;
+}
+.cart-bill__information-item {
+  width: 100%;
+  height: 95px;
+  box-sizing: border-box;
+  color: #3fb871;
+}
+.cart-bill__information-item div {
+  font-size: 0.85rem;
+  padding-top: 39px;
+  padding-bottom: 39px;
+  border: 1px solid #c2c2c2;
+  border-bottom: none;
+  font-weight: bolder;
+}
+.cart-bill__information-item div:nth-last-child(1) {
+  border-left: none;
+}
+.cart-bill__information-item.-total {
+  background-color: #3fb871;
+  color: white;
+}
+.cart-bill__information-item.-total div {
+  border: none;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.cart-bill__information-item.-total div:nth-child(1) {
+  border-right: 1px solid #c2c2c2;
+}
+.cart-bill__information-item-title {
+  width: 64%;
+  float: left;
+  padding-left: 155px;
+}
+.cart-bill__information-item-price {
+  width: 36%;
+  float: right;
+  padding-left: 80px;
+}
+.cart-bill__information-btn-buy {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #3fb871;
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #3fb871;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  padding-top: 0.85rem;
+  float: right;
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */

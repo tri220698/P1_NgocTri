@@ -1,0 +1,20 @@
+include pug/header.pug
+section.cart
+    +category("cart", "Giỏ hàng")
+    h2.cart__category-name GIỎ HÀNG
+    .cart-list-product
+        .cart-list-product__title
+            each titleCart in titlesCart
+                span(class= "cart-list-product__title-" +Object.keys(titleCart)[0])= Object.values(titleCart)[0]
+        each item in itemsCart
+            +cartItem(item)
+    .cart-action
+        a(href="#").cart-action__cancel HỦY ĐƠN HÀNG
+        a(href="#").cart-action__buy TIẾP TỤC MUA
+    .cart-bill
+        .cart-bill__information
+            +billItem("","TỔNG TIỀN ( CHƯA THUẾ )","270.000 đ")
+            +billItem("","THUẾ ( VAT 10% )","27.000 đ")
+            +billItem("-total","TỔNG PHẢI THANH TOÁN","297.000 đ")
+            a(href="#").cart-bill__information-btn-buy THANH TOÁN
+include pug/footer.pug
