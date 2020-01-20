@@ -1,0 +1,51 @@
+include pug/header.pug
+section.slide
+    .slide-wrapper
+        -for (var i = 0; i<3;i++)
+            .slide-wrapper__item
+                img(src="images/slide-1920x590.png", alt="")
+    .slide-btn
+        ul
+            li
+            li
+            li
+        span
+section.hot-product
+    +listTitle("hot-product","Sản phẩm nổi bật")
+    .hot-product-list
+        .hot-product-list-left
+            +productItem("-big hot-product-list-left","new","NEW","images/spx2-4.png","Cây chân chim","250.000 đ")
+            +productItem("hot-product-list-left","none","","images/spx2-11.png","Cây Dạ Lam","500.000 đ")
+            +productItem("hot-product-list-left","none","","images/spx2-6.png","Cây Danh Dự","850.000 đ")
+        .hot-product-list-right        
+            +productItem("hot-product-list-right","sale","-50%","images/spx2-5.png","Cây cọ ta","150.000 đ")
+            +productItem("hot-product-list-right","new","NEW","images/spx2-15.png","Cây dứa nhỏ","375.000 đ")      
+            +productItem("-big hot-product-list-right","sale","-50%","images/spx2-3.png","Cây đa búp đỏ","1.000.000 đ")
+section.best-product
+    .best-product-left
+        +listTitle("best-product-left","Sản phẩm mua nhiều")
+        +bestProduct(gridData)
+    .best-product-right
+        +listTitle("best-product-right","Sản phẩm khuyến mãi")
+        .best-product-right-list
+            each product in bestProduct
+                +productItem("best-product-right-list",product.state,product.nameState,product.img,product.name,product.price)
+section.banner-product
+    img(src="images/banner-11140x217.png", alt="")
+section.new-product
+    +listTitle("new-product","Sản phẩm mới")
+    .new-product-list
+        each product in newProduct
+            +productItem("new-product-list",product.state,product.nameState,product.img,product.name,product.price)
+section.news
+    +listTitle("news","Tin tức")
+    .news-list
+        each item in newsHome
+            .news-list__item
+                div
+                img(src= item.img, alt="")
+                p(style="font-style: italic;")= item.time
+                h5= item.title
+                p= item.content
+                a(href="#") Đọc tiếp
+include pug/footer.pug
