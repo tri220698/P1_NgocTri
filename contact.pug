@@ -1,0 +1,20 @@
+include pug/header.pug
+section.contact
+    +category("contact", "Liên hệ")
+    img.contact__map(src="images/lien-he.png")
+    .contact-form
+        .contact-form__left
+            h3.contact-form__left-title THÔNG TIN LIÊN HỆ
+            +inputText("contact-form__left-","Họ và tên ","<b>*:</b>")
+            +inputText("contact-form__left-","Địa chỉ email ","<b>*:</b>")
+            +inputText("contact-form__left-","Số ĐT ","<b>*:</b>")
+            .contact-form__left-cmt
+                label(for="")!= "Bình luận " + "<b>*:</b>"
+                textarea
+            a(href="#").contact-form__left-submit GỬI
+        .contact-form__right
+            img(src="images/logo-footer.png", alt="")
+            p DKT được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực Thương mại điện tử.Chúng tôi đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm
+            span(class="fas fa-mobile-alt") Điện thoại : (84-4) 66.558.868
+            span(class="far fa-envelope") Email : info@dkt.com.vn 
+include pug/footer.pug

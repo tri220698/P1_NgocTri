@@ -36,3 +36,125 @@ mixin billItem(cl,title,price)
     div(class= "cart-bill__information-item" + " " + cl)
         .cart-bill__information-item-title= title
         .cart-bill__information-item-price= price
+
+
+mixin productItem(cl,tag,tagName,img,name,price)
+    div(class= cl + "__item")
+        div(class= cl + "__item-tag " + "-" +tag)= tagName
+        div(class= cl + "__item-hover")
+            img(src= img, alt="product")
+            div
+            p
+                a(href="#") MUA NGAY
+                a(href="#").-search.fas.fa-search
+        p(class= cl + "__item-name")= name
+        span(class= cl + "__item-rate")
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star-half-alt")
+        p(class= cl + "__item-price")!= price + "<del>250.000 đ</del>"
+
+mixin listTitle(cl,title)
+    div(class= cl + "__list-title")
+        h4= title
+        div
+            span(class="fas fa-chevron-left")
+            span(class="fas fa-chevron-right")
+
+mixin galleryLeft(cl) 
+    div(class= cl + "__block")
+        +listTitle("gallery","Danh mục sản phẩm")
+        p(class="fas fa-chevron-right")    Cây chậu treo ( 10 )
+        p(class="fas fa-chevron-right").-active    Cây có hoa ( 10 )
+        p(class="fas fa-chevron-right")    Cây dây leo
+        p(class="fas fa-chevron-right")    Cây để bàn
+        p(class="fas fa-chevron-right")    Cây may mắn
+        p(class="fas fa-chevron-right")    Cây trang trí
+        p(class="fas fa-chevron-right")    Cây nội thất
+    div(class= cl + "__block")
+        +listTitle("gallery","Tìm theo giá")
+        p(class="fas fa-chevron-right")    200.000 Đ - 400.000 Đ
+        p(class="fas fa-chevron-right")    400.000 Đ - 600.000 Đ
+        p(class="fas fa-chevron-right")    600.000 Đ - 800.000 Đ
+        p(class="fas fa-chevron-right")    800.000 Đ - 1.000.000 Đ
+        p(class="fas fa-chevron-right")    1.000.000 Đ - 2.000.000 Đ
+    div(class= cl + "__block")
+        +listTitle("gallery","Tìm theo màu")
+        div(class= cl + "__block-color")
+            span Xanh cây
+            span.-ro Đỏ cam
+            span.-pp Tím
+            span.-lb Xanh trời
+            span.-yl Vàng
+            span.-pink Hồng
+
+
+mixin contentRightTop(cl)
+    div(class= cl + "__img")
+    div(class= cl + "-sort")
+        div(class= cl + "-sort" + "__left")
+            span(class="fas fa-th").-active
+            span(class="fas fa-th-list")
+        div(class= cl + "-sort" + "__right")
+            span Sắp xếp theo
+            div 
+                input(type="checkbox", id="dropdown1")
+                ul
+                    li Tên sản phẩm
+                    li Loại sản phẩm
+                    li Giá
+                    li Màu
+                label(for="dropdown1") Tên sản phẩm
+                    i(class="fas fa-sort-down")
+            span(style="margin-left: 40px;") Show
+            div(style="width: 60px;") 
+                input(type="checkbox", id="dropdown2")
+                ul
+                    li 11
+                    li 12
+                    li 13
+                    li 14
+                    li 15
+                label(for="dropdown2") 15
+                    i(class="fas fa-sort-down")
+
+mixin listData(data)
+    each dt in data
+        .list-content-right-list__item
+            .item-left
+                img(src= dt.img, alt="")
+            .item-right
+                p.item-right__name= dt.name
+                span.item-right__rate
+                    -for (var i = 0; i<5 ; i++)
+                        i(class="fas fa-star")
+                p.item-right__detail= dt.desc
+                p.item-right__price= dt.price
+                .item-right__btn-group
+                    a(href="#").item-right__btn-buy MUA NGAY
+                    a(href="#").item-right__btn-another.-search.fas.fa-search
+                    a(href="#").item-right__btn-another.-love.fas.fa-heart
+
+mixin pages()
+    a(href="#") Trang trước
+    a(href="#").-active 1
+    a(href="#") 2
+    a(href="#") 3
+    a(href="#") 4
+    a(href="#") Trang cuối
+
+mixin bestProduct(data)
+    -for (var x = 0; x < 6; x++)
+        .best-product-left__item
+            img(src= data[x].img, alt="")
+            div
+                a(href="#")= data[x].name
+                span
+                    -for (var i = 0; i<5 ; i++)
+                        if i == 4
+                            i(class="fas fa-star-half-alt")
+                        else
+                            i(class="fas fa-star")
+                p= data[x].price

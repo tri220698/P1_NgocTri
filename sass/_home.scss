@@ -1,0 +1,236 @@
+@-webkit-keyframes slide {
+    2% {margin-left: 0;}
+    50% {margin-left: -100%;}
+    90% {margin-left: -200%;}
+}
+
+@-webkit-keyframes btn-slide {
+    2% {margin-left: -26px;}
+    50% {margin-left: -6px;}
+    90% {margin-left: 14px;}
+}
+
+.slide {
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    position: relative;
+    
+    &-wrapper {
+        width: 300%;
+        height: 100%;
+        animation: slide 6s ease infinite;
+
+        &__item {
+            width: 33.33333%;
+            height: 100%;
+            float: left;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-btn {
+        ul {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            z-index: 5;
+            list-style-type: none;
+            margin-left: -30px;
+
+            li {
+                float: left;
+                width: 0.75rem;
+                height: 0.75rem;
+                background-color: white;
+                border-radius: 50%;
+                margin: 0 4px;
+                cursor: pointer;
+            }
+        }
+
+        span {
+            position: absolute;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: $color-green;
+            border-radius: 50%;
+            top: 90%;
+            left: 50%;
+            margin-left: -26px;
+            z-index: 6;
+            animation: btn-slide 6s ease infinite;
+            cursor: pointer;
+        }
+    }
+}
+
+.hot-product {
+    @include container;
+
+    &__list-title { 
+        @include list-title(none);
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &-list {
+        width: 100%;
+        display: flex;
+
+        &-left {
+            @include columns-hot(48.5%,2);
+        }
+
+        &-right {
+            margin-left: auto;
+            @include columns-hot(48.5%,2);
+        }
+    }
+}
+
+.best-product {
+    @include container;
+    
+    margin-top: 6rem;
+    display: flex;
+
+    &-left {
+        width: 23%;
+
+        &__list-title { 
+            @include list-title(none);
+            margin-bottom: 2.5rem;
+        }
+
+        &__item {
+            width: 100%;
+            height: 124px;
+            box-sizing: border-box;
+            border: $cart-border;
+            border-bottom: none;
+            padding: 1.25rem;
+            display: flex;
+
+            &:nth-last-child(1) {
+                border-bottom: $cart-border;
+            }
+
+            img {
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+
+            div {
+                padding: 0.5rem 0 0.5rem 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: $color-gray;
+                }
+
+                span {
+                    display: block;
+                    color: $color-star;
+                    font-size: $font-size;
+                    margin: 0.5rem 0;
+                }
+
+                p {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    &-right {
+        width: 74%;
+
+        margin-left: auto;
+
+        &__list-title { 
+            @include list-title(block);
+            margin-top: -2rem;
+        }
+
+        &-list {
+            @include columns-hot(100%,3);
+            margin-top: 40px;
+        }
+    }
+}
+
+.banner-product {
+    @include container;
+
+    margin-top: 2rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.new-product {
+    @include container;
+
+    &__list-title { 
+        @include list-title(block);
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &-list {
+        @include columns-hot(100%,4);
+    }
+}
+
+.news {
+    @include container;
+    margin-bottom: 5rem;
+
+    &__list-title { 
+        @include list-title(block);
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+
+        &__item {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 200px;
+            }
+
+            h5 {
+                color: $color-green;
+                cursor: pointer;
+            }
+
+            p {
+                color: $color-gray;
+                font-size: $font-size-s;
+                line-height: 1.2rem;
+                padding: 12px 0;
+            }
+
+            a {
+                color: $color-green;
+                font-size: $font-size-s;
+                line-height: 1.2rem;
+                padding: 12px 0;
+                text-decoration: none;
+                font-style: italic;
+            }
+        }
+    }
+}
