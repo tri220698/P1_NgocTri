@@ -1,0 +1,61 @@
+include pug/header.pug
+section.detail-product
+    +category("detail-product", "Cây dạ lam")
+    .detail-product-information
+        .detail-product-information__left
+            img.detail-product-information__img-main(src="images/img-detail-1.png")
+            .detail-product-information__img-more
+                img(src="images/spx2-1.png", alt="")
+                img(src="images/spx2-5.png", alt="")
+                img(src="images/spx2-7.png", alt="")
+                img(src="images/spx2-12.png", alt="")
+                img(src="images/spx2-14.png", alt="")
+        .detail-product-information__right
+            h3.detail-product-information__name Cây Dạ Lam
+            span.detail-product-information__rate
+                -for (var i = 0; i<5 ; i++)
+                    i(class="fas fa-star")
+            h3.detail-product-information__price!= "4.099.000 đ" + "<del>4.099.000 đ</del>"
+            p.detail-product-information__detail Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+            .detail-product-information__amount
+                p Số lượng
+                span.detail-product-information__btn -
+                span.detail-product-information__index 1
+                span.detail-product-information__btn +
+            .detail-product-information__btn-group
+                a(href="#").detail-product-information__btn-buy MUA NGAY
+                a(href="#").detail-product-information__btn-another.-search.fas.fa-search
+                a(href="#").detail-product-information__btn-another.-love.fas.fa-heart
+            .detail-product-information__social-group
+                a(href="#").detail-product-information__social.-fb
+                    i(class="fab fa-facebook-square") Like
+                    span 0
+                a(href="#").detail-product-information__social.-tw
+                    i(class="fab fa-twitter") Tweet
+                a(href="#").detail-product-information__social.-gg
+                    i(class="fab fa-google-plus-g") 1
+                    span 0
+                a(href="#").detail-product-information__social.-share
+                    i(class="fas fa-plus-square") Share
+    .detail-product-group
+        .detail-product-group__title
+            span.-active THÔNG TIN SẢN PHẨM
+            span KHÁCH HÀNG ĐÁNH GIÁ
+            span THẺ TAG
+        .detail-product-group__content
+            p Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
+            p Tên khoa học: Calathea zebrina
+            p Họ thực vật: Marantaceae (Củ dong).
+            p Chiều cao: 0,8-1,2m
+            p Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam.
+            span Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+            span Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh.
+            span Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng.
+            span Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.
+    +listTitle("detail-product","Sản phẩm cùng loại")
+    .detail-product__list-product
+        +productItem("detail-product","none","","images/spx2-11.png","Cây cọ Nhật","250.000 đ")
+        +productItem("detail-product","none","","images/spx2-6.png","Cây Hồng Môn","250.000 đ")
+        +productItem("detail-product","none","","images/spx2-8.png","Cây phát lộc","250.000 đ")
+        +productItem("detail-product","none","","images/spx2-12.png","Cây Kim Ngân","250.000 đ")
+include pug/footer.pug

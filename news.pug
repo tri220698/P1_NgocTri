@@ -1,0 +1,34 @@
+include pug/header.pug
+section.news-page
+    +category("news-page", "Tin tức")
+    .news-page-content
+        .news-page-content-left
+            +galleryLeft("news-page-content-left")
+            .news-page-content-left__block
+                +listTitle("gallery","Tin tức nổi bật")
+                each item in hotNews
+                    .news-page-content-left__block-item
+                        img(src= item.img, alt="")
+                        span= item.title
+            .news-page-content-left__block
+                +listTitle("gallery","Blog tag")
+                .news-page-content-left__block-tags
+                    each blog,index in blogTags
+                        if index == 0
+                            .news-page-content-left__block-tag.-active= blog
+                        else
+                            .news-page-content-left__block-tag= blog
+        .news-page-content-right
+            each item in news
+                .news-page-content-right__news-item
+                    h3= item.title
+                    .news-page-content-right__news-time-update
+                        span(class="far fa-calendar-minus") 20/12/2015
+                        span(class="far fa-clock") 11:20:00 AM
+                        span(class="far fa-comment-dots") 0 Bình luận
+                    .news-page-content-right__news-img
+                        img(src= item.img, alt="")
+                    p= item.content
+            .news-page-content-right__pages
+                +pages
+include pug/footer.pug

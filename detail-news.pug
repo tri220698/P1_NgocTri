@@ -1,0 +1,82 @@
+include pug/header.pug
+section.detail-news
+    +category("detail-news", "Tin tức")
+    .detail-news-content
+        .detail-news-content-left
+            +galleryLeft("detail-news-content-left")
+            .detail-news-content-left__block
+                +listTitle("gallery","Tin tức nổi bật")
+                each item in hotNews
+                    .detail-news-content-left__block-item
+                        img(src= item.img, alt="")
+                        span= item.title
+            .detail-news-content-left__block
+                +listTitle("gallery","Blog tag")
+                .detail-news-content-left__block-tags
+                    each blog,index in blogTags
+                        if index == 0
+                            .detail-news-content-left__block-tag.-active= blog
+                        else
+                            .detail-news-content-left__block-tag= blog
+        .detail-news-content-right
+            .detail-news-content-right-read
+                h3 Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên
+                .detail-news-content-right-read__time-update
+                    span(class="far fa-calendar-minus") 20/12/2015
+                    span(class="far fa-clock") 11:20:00 AM
+                    span(class="far fa-comment-dots") 0 Bình luận
+                each news in detailNews
+                    if news.search('img') != -1
+                        .detail-news-content-right-read__img
+                            img(src= news, alt="")
+                    else
+                        p= news
+            .detail-news-content-right-read-cmt
+                h3 BÌNH LUẬN (3)
+                .detail-news-content-right-read-cmt__detail
+                    .detail-news-content-right-read-cmt__detail-left
+                        div
+                            img(src="images/avatar.png", alt="")
+                    .detail-news-content-right-read-cmt__detail-right
+                        .content-cmt
+                            a(href="#") Nguyễn Văn An
+                            p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            p.-time Thứ 7, 26/12/2015 12: 00 AM
+                            a(href="#").-btn-reply Trả lời
+                        .detail-news-content-right-read-cmt__detail.-reply
+                            .detail-news-content-right-read-cmt__detail-left
+                                div
+                                    img(src="images/avatar.png", alt="")
+                            .detail-news-content-right-read-cmt__detail-right
+                                .content-cmt
+                                    a(href="#") Nguyễn Văn An
+                                    p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                    p.-time Thứ 7, 26/12/2015 12: 00 AM
+                                    a(href="#").-btn-reply Trả lời
+                .detail-news-content-right-read-cmt__detail
+                    .detail-news-content-right-read-cmt__detail-left
+                        div
+                            img(src="images/avatar.png", alt="")
+                    .detail-news-content-right-read-cmt__detail-right
+                        .content-cmt
+                            a(href="#") Nguyễn Văn An
+                            p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            p.-time Thứ 7, 26/12/2015 12: 00 AM
+                            a(href="#").-btn-reply Trả lời
+            .detail-news-content-right-write-cmt
+                h3 VIẾT BÌNH LUẬN :
+                .detail-news-content-right-write-cmt__form
+                    .detail-news-content-right-write-cmt__input
+                        label(for="") Họ và tên :
+                        input(type="text")
+                    .detail-news-content-right-write-cmt__input
+                        label(for="") Email :
+                        input(type="text")
+                    .detail-news-content-right-write-cmt__input
+                        label(for="") Phone :
+                        input(type="text")
+                    .detail-news-content-right-write-cmt__input.-cmt
+                        label(for="") Bình luận :
+                        textarea
+                a(href="#") GỬI
+include pug/footer.pug
