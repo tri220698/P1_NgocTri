@@ -1,0 +1,14 @@
+include pug/header.pug
+section.list
+    +category("list", "Danh sách sản phẩm")
+    .list-content
+        .list-content-left
+            +galleryLeft("list-content-left")
+        .list-content-right
+            .list-content-right-top
+                +contentRightTop("list-content-right-top")
+            .list-content-right-list
+                +listData(listData)
+            .list-content-right-bottom
+                +pages
+include pug/footer.pug

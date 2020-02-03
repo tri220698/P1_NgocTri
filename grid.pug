@@ -1,0 +1,15 @@
+include pug/header.pug
+section.grid
+    +category("grid", "Danh mục sản phẩm")
+    .grid-content
+        .grid-content-left
+            +galleryLeft("grid-content-left")
+        .grid-content-right
+            .grid-content-right-top
+                +contentRightTop("grid-content-right-top")
+            .grid-content-right-list
+                each data in gridData
+                    +productItem("grid-content-right-list","none","",data.img,data.name,data.price)
+            .grid-content-right-bottom
+                +pages
+include pug/footer.pug

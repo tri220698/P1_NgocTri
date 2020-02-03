@@ -1,0 +1,43 @@
+.grid {
+    @include container;
+
+    @include category;
+
+    &-content {
+        display: flex;
+
+        &-left {
+            width: 23%;
+            margin-top: 2.25rem;
+            @include gallery-left(block,block,block);
+        }
+    
+        &-right {
+            width: 77%;
+            padding-left: 2rem;
+            margin-bottom: 10rem;
+
+            .grid-content-right-top {
+                width: 100%;
+
+                @include content-right-top;
+            }            
+
+            &-list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap : 2rem;
+                margin: 0 0 5rem 0;
+
+                &__item {
+                    @include product-item(100%);
+                }
+            }
+
+            &-bottom {
+                @include pages;
+            }
+        }
+    }
+}
